@@ -1,4 +1,9 @@
 <template>
-    <Header />
-    <Swiper />
+    
+        <Header />
+        <Swiper />
+        <Section />
+        <Card />
+        <Template />
+        <Contact />
 </template>

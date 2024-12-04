@@ -1,17 +1,20 @@
 <template>
-    <div class="font-Montserrat xl:h-[102px] h-[74px] lg:h-[90px] md:h-[80px] flex items-center bg-primary w-full xl:justify-around">
+  <div class="w-full flex items-center bg-primary xl:h-[102px] h-[74px] lg:h-[90px] md:h-[80px]">
+    <div class="font-Montserrat w-[90%] mx-auto justify-between flex items-center">
       <div class="xl:w-[131px] w-[127.07px] h-[32.32px] lg:w-[120px] h-[33.32px] bg-white flex justify-center items-center">
         <NuxtImg 
           src="/img/logo.png" 
           class="xl:w-[115.15px] xl:h-[19.61px] lg:w-[105px] w-[111.7px] h-[19.02px] object-contain"
         />
       </div>
-      <ul class="hidden xl:w-[537px] text-white font-normal xl:space-x-[50px] xl:flex lg:space-x-[30px] items-center">
-        <li class="relative">
+      <ul class="hidden text-white font-normal xl:space-x-[50px] lg:flex lg:space-x-[30px] items-center">
+        <li class="relative"
+        @mouseleave="showDropdownProduct = false"
+        >
                 <div 
                 class="group cursor-pointer"
                  @mouseover="showDropdownProduct = true" 
-                  @mouseleave="showDropdownProduct = false"
+                  
                 >
                   <span class="mr-[1px]">Product</span>
                     <NuxtImg
@@ -41,11 +44,13 @@
                 <span class="">Pricing</span>
             </NuxtLink>
         </li>
-        <li class="relative">
+        <li class="relative"
+        @mouseleave="showDropdownIntegrations = false"
+        >
                 <div 
                 class="group cursor-pointer"
                  @mouseover="showDropdownIntegrations = true" 
-                  @mouseleave="showDropdownIntegrations = false"
+                  
                 >
                   <span class="mr-[1px]">Integrations</span>
                     <NuxtImg
@@ -70,11 +75,13 @@
                 </ul>
             
         </li>
-        <li class="relative">
+        <li class="relative"
+        @mouseleave="showDropdownResources = false"
+        >
                 <div 
                 class="group cursor-pointer"
                  @mouseover="showDropdownResources = true" 
-                  @mouseleave="showDropdownResources = false"
+                  
                 >
                   <span class="mr-[1px]">Resources</span>
                     <NuxtImg
@@ -104,7 +111,7 @@
         <button style="border-radius: 3.91px;" class="xl:w-[142.93px] xl:h-[34px] lg:w-[130px] text-[12.51px] lg:h-[30px] px-3 md:w-[120px] md:h-[25px] md:text-[12px] bg-signblack text-white">sign up for free</button>
         <button style="border-radius: 3.91px;" class="xl:w-[81.93px] xl:h-[34px] lg:h-[30px] lg:w-[81.93px] md:h-[25px] md:text-[12px] md:w-[60px] bg-white text-[12.51px]">log in</button>
       </div>
-      <div class="lg:hidden absolute left-[326px] md:left-[750px]">
+      <div class="lg:hidden">
           <NuxtImg 
             src="/icons/menu.svg"
             class="w-[33.5px] h-[16.54px] cursor-pointer"
@@ -113,47 +120,69 @@
       </div>
       <div
       id="menu"
-      class="lg:hidden fixed right-0 top-0 md:right-0 h-screen w-[200px] bg-blue-500 md:w-[350px] bg-purple-600 transform transition-transform duration-500 ease-in-out"
+      class="xl:hidden fixed right-0 top-0 md:right-0 h-screen w-[200px] bg-primary md:w-[350px] transform transition-transform duration-500 ease-in-out"
       :class="isNavbarOpen ? 'translate-x-0' : 'translate-x-full'"
     >
     <button @click="toggleNavbar" class="text-white p-2">Close</button>
-      <ul class="text-white font-normal ml-[7px]">
-          
-          <li class="mb-[8px]">
-            <NuxtLink class="cursor-pointer">
-            <span class="mr-[1px]">Product</span>
-            <NuxtImg 
-                src="/icons/vector.svg"
-                class="inline xl:w-[9px] h-[5px] w-[9px] xl:h-[5px] lg:w-[7px] lg:h-[4px]"
-                />
-          </NuxtLink>
-          </li>
-          <li class="mb-[8px]">
-            <NuxtLink class="cursor-pinter">
-            <span class="mr-[1px]">Pricing</span>
-          </NuxtLink>
-          </li>
-          <li class="mb-[8px]">
-            <NuxtLink class="cursor-pointer">
-            <span class="mr-[1px]">Integrations</span>
-            <NuxtImg 
-                src="/icons/vector.svg"
-                class="inline xl:w-[9px] h-[5px] w-[9px] xl:h-[5px] lg:w-[7px] lg:h-[4px]"
-                />
-          </NuxtLink>
-          </li>
-          <li class="mb-[8px]">
-            <NuxtLink class="cursor-pointer">
-            <span class="mr-[1px]">Resources</span>
-            <NuxtImg 
-                src="/icons/vector.svg"
-                class="inline xl:w-[9px] h-[5px] w-[9px] xl:h-[5px] lg:w-[7px] lg:h-[4px]"
-                />
-          </NuxtLink>
-          </li>
-      </ul>  
+    <ul class="text-white font-normal ml-[7px]">
+  <!-- Product Dropdown -->
+  <li class="mb-[8px]">
+    <NuxtLink class="cursor-pointer" @click="showSliderProduct = !showSliderProduct">
+      <span class="mr-[1px]">Product</span>
+      <NuxtImg 
+        src="/icons/vector.svg"
+        class="inline xl:w-[9px] h-[5px] w-[9px] xl:h-[5px] lg:w-[7px] lg:h-[4px]"
+      />
+    </NuxtLink>
+    <transition name="slide-down">
+      <ul
+        v-show="showSliderProduct"
+        class="w-[150px] bg-purple-500 p-4 rounded-l"
+      >
+        <li class="mb-3">Pricing</li>
+        <li class="mb-3">Benefits</li>
+        <li class="mb-3">Features</li>
+        <li class="mb-3">Product Demo</li>
+        <li class="mb-3">Visual Builder</li>
+        <li class="mb-3 leading-[18px]">Dynamic Responses</li>
+        <li class="mb-3 leading-[18px]">Artificial Intelligence</li>
+        <li class="mb-3">Analytics</li>
+      </ul>
+    </transition>
+  </li>
+
+  <!-- Pricing -->
+  <li class="mb-[8px]">
+    <NuxtLink class="cursor-pointer">
+      <span class="mr-[1px]">Pricing</span>
+    </NuxtLink>
+  </li>
+
+  <!-- Integrations -->
+  <li class="mb-[8px]">
+    <NuxtLink class="cursor-pointer">
+      <span class="mr-[1px]">Integrations</span>
+      <NuxtImg 
+        src="/icons/vector.svg"
+        class="inline xl:w-[9px] h-[5px] w-[9px] xl:h-[5px] lg:w-[7px] lg:h-[4px]"
+      />
+    </NuxtLink>
+  </li>
+
+  <!-- Resources -->
+  <li class="mb-[8px]">
+    <NuxtLink class="cursor-pointer">
+      <span class="mr-[1px]">Resources</span>
+      <NuxtImg 
+        src="/icons/vector.svg"
+        class="inline xl:w-[9px] h-[5px] w-[9px] xl:h-[5px] lg:w-[7px] lg:h-[4px]"
+      />
+    </NuxtLink>
+  </li>
+</ul> 
     </div>
     </div>
+  </div>
     
   </template>
 
@@ -163,6 +192,9 @@
   const showDropdownProduct = ref(false);
   const showDropdownIntegrations = ref(false);
   const showDropdownResources = ref(false);
+
+  const showSliderProduct = ref(false)
+
 
   const toggleNavbar = ()=>{
     console.log("salam")
