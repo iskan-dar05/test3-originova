@@ -40,8 +40,8 @@
                     
                     <div class="lg:w-[45%] flex flex-col justify-center">
                     <div class="flex w-full items-center lg:justify-start xl:space-x-0 justify-center space-x-[10px]">
-                        <NuxtImg
-                            src="/icons/left.svg"
+                        <img
+                            src="~/assets/icons/left.svg"
                             alt="Left Icon"
                             class="w-[24px] h-[24px] xl:w-[40px] lg:hidden"
                             @click="swiper.prev()"
@@ -67,7 +67,7 @@
                            
                             <button style="border-radius: 6px"
                                 class="flex justify-center items-center whitespace-nowrap gap-2  mt-[30px] py-[14px] px-[90px] mx-auto lg:m-0 text-[12.51px] leading-[13.77px] xl:mt-[20px] border-[0.78px] lg:px-[23.24px] lg:py-[14px] bg-primary text-white xl:text-[12.51px] xl:leading-[13.77px]">
-                                    learn more <NuxtImg src="/icons/arrow.svg" class="w-[12px]" />
+                                    learn more <img src="~/assets/icons/arrow.svg" class="w-[12px]" />
                             </button>
                         </div>
                        
@@ -78,8 +78,8 @@
                         </swiper-container>
                         
                      </ClientOnly>
-                     <NuxtImg
-                            src="/icons/right.svg"
+                     <img
+                            src="~/assets/icons/right.svg"
                             alt="Right Icon"
                             class="w-[24px] h-[24px] xl:w-[40px] lg:hidden"
                             @click="swiper.next()"
@@ -88,8 +88,8 @@
                   
                     </div>
                     <div class="xl:w-[357.48px] mt-[20px] xl:mt-0 mx-auto w-[266.25px] h-[257.85px] xl:h-[337px]">
-                            <NuxtImg
-                                src="/img/slideimg.png"
+                            <img
+                                src="~/assets/img/slideimg.png"
                                 class="xl:w-[357.48px] xl:h-[337px] w-[266.25px] h-[257.85px]"
                             />
                      </div>

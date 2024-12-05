@@ -17,8 +17,8 @@
                   
                 >
                   <span class="mr-[1px]">Product</span>
-                    <NuxtImg
-                    src="/icons/vector.svg"
+                    <img
+                    src="~/assets/icons/vector.svg"
                     class="inline xl:w-[9px] xl:h-[5px] lg:w-[7px] lg:h-[4px] md:w-[7px] md:h-[5px] ml-1"
                     />
                 </div>
@@ -53,8 +53,8 @@
                   
                 >
                   <span class="mr-[1px]">Integrations</span>
-                    <NuxtImg
-                    src="/icons/vector.svg"
+                    <img
+                    src="~/assets/icons/vector.svg"
                     class="inline xl:w-[9px] xl:h-[5px] lg:w-[7px] lg:h-[4px] md:w-[7px] md:h-[5px] ml-1"
                     />
                 </div>
@@ -84,8 +84,8 @@
                   
                 >
                   <span class="mr-[1px]">Resources</span>
-                    <NuxtImg
-                    src="/icons/vector.svg"
+                    <img
+                    src="~/assets/icons/vector.svg"
                     class="inline xl:w-[9px] xl:h-[5px] lg:w-[7px] lg:h-[4px] md:w-[7px] md:h-[5px] ml-1"
                     />
                 </div>
@@ -112,8 +112,8 @@
         <button style="border-radius: 3.91px;" class="xl:w-[81.93px] xl:h-[34px] text-primary lg:h-[30px] lg:w-[81.93px] md:h-[25px] md:text-[12px] md:w-[60px] bg-white text-[12.51px]">log in</button>
       </div>
       <div class="lg:hidden">
-          <NuxtImg 
-            src="/icons/menu.svg"
+          <img 
+            src="~/assets/icons/menu.svg"
             class="w-[33.5px] h-[16.54px] cursor-pointer"
             @click="toggleNavbar"
           />
@@ -123,15 +123,15 @@
       class="xl:hidden fixed right-0 top-0 md:right-0 h-screen w-[200px] bg-primary md:w-[350px] transform transition-transform duration-500 ease-in-out"
       :class="isNavbarOpen ? 'translate-x-0' : 'translate-x-full'"
     >
-    <NuxtImg src="/icons/arrow.svg" @click="toggleNavbar" class="cursor-pointer w-[40px]" />
+    <img src="~/assets/icons/arrow.svg" @click="toggleNavbar" class="cursor-pointer w-[40px]" />
     <!-- <button @click="toggleNavbar" class="text-white p-2">Close</button> -->
     <ul class="text-white font-normal mt-[15px] ml-[12px]">
   <!-- Product Dropdown -->
   <li class="mb-[15px]">
     <NuxtLink class="cursor-pointer" @click="showSliderProduct = !showSliderProduct">
       <span class="mr-[3px] font-semibold text-[18px]">Product</span>
-      <NuxtImg 
-        src="/icons/vector.svg"
+      <img 
+        src="~/assets/icons/vector.svg"
         class="inline w-[12px]"
       />
     </NuxtLink>
@@ -163,8 +163,8 @@
   <li class="mb-[15px]">
     <NuxtLink class="cursor-pointer" @click="showSliderInteg = !showSliderInteg">
       <span class="mr-[3px] font-semibold text-[18px]">Integration</span>
-      <NuxtImg 
-        src="/icons/vector.svg"
+      <img 
+        src="~/assets/icons/vector.svg"
         class="inline w-[12px]"
       />
     </NuxtLink>
@@ -189,8 +189,8 @@
   <li class="mb-[15px]">
     <NuxtLink class="cursor-pointer" @click="showSliderResou = !showSliderResou">
       <span class="mr-[3px] font-semibold text-[18px]">Resources</span>
-      <NuxtImg 
-        src="/icons/vector.svg"
+      <img 
+        src="~/assets/icons/vector.svg"
         class="inline w-[12px]"
       />
     </NuxtLink>

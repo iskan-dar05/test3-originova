@@ -21,10 +21,10 @@
                         v-if="imageLoading"
                         class="sm:w-full sm:h-full bg-gray-200 animate-pulse rounded-lg"
                     ></div>
-                    <NuxtImg
+                    <img
                     v-show="!imageLoading"
                     class="w-full"
-                    src="/img/heroImg.png"
+                    src="~/assets/img/heroImg.png"
                     @load="onImageLoad"
                     />
             </div>

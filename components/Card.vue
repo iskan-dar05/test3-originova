@@ -1,6 +1,6 @@
 <template>
     <div class="w-full xl:flex md:flex block font-Montserrat">
-        <NuxtImg src="/img/person.png"
+        <img src="~/assets/img/person.png"
         class="xl:w-[50%] md:w-[50%] w-full"
         />
         <div class="xl:w-[50%] md:w-[50%] pb-[30px] xl:pb-0 md:pb-0 flex flex-col bg-primary xl:flex md:flex xl:flex-col md:flex-col justify-center items-center">
@@ -26,13 +26,13 @@
                         
                      </ClientOnly>
             <div class="xl:flex md:flex md:w-[75%] w-[88%] flex justify-between md:justify-between xl:justify-between xl:w-[75%]">
-                <NuxtImg
-                    src="/icons/east.svg"
+                <img
+                    src="~/assets/icons/east.svg"
                     @click="swiper.prev()"
                     class="cursor-pointer"
                 />
-                <NuxtImg
-                    src="/icons/west.svg"
+                <img
+                    src="~/assets/icons/west.svg"
                     @click="swiper.next()"
                     class="cursor-pointer"
                 />

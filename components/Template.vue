@@ -7,7 +7,7 @@
         </div>
         <div class="xl:mt-[40px] mt-[20px] md:mt-[30px]">
             <div class="xl:flex md:flex flex md:justify-center justify-center justify-between md:justify-between xl:justify-center xl:justify-between">
-                <NuxtImg src="/icons/gauch.svg" @click="swiper.prev()" />
+                <img src="~/assets/icons/gauch.svg" @click="swiper.prev()" />
             <ClientOnly>
                         
 
@@ -23,7 +23,7 @@
                                 <div class="flex flex-col items-center flex-grow justify-center md:space-y-[10px]">
                                     <!-- Image Section -->
                                     <div class="xl:aspect-[4/3] sm:aspect-[4/3] md:aspect-[4/3] lg:aspect-[4/3] aspect-[4/3] sm:max-w-[70px] w-full max-w-[100px] max-w-[94px] md:max-w-[90px] xl:mb-[10px]">
-                                    <NuxtImg :src="slide.img" class="w-full h-full object-contain" />
+                                    <img :src="slide.img" class="w-full h-full object-contain" />
                                     </div>
                                     <!-- Title -->
                                     <h3 class="xl:font-bold sm:w-[50%] sm:font-bold sm:text-[18px] xl:w-[50%] md:w-[50%] w-[50%] font-bold text-[23.38px] leading-[31.94px] md:font-bold md:text-[20px] xl:leading-[34.13px] lg:text-[20px] xl:text-[25px] text-center">
@@ -41,7 +41,7 @@
                         </swiper-container>
                         
                      </ClientOnly>
-                    <NuxtImg src="/icons/droit.svg" @click="swiper.next()" />
+                    <img src="~/assets/icons/droit.svg" @click="swiper.next()" />
             </div>
         </div>
         </div>
@@ -49,19 +49,22 @@
 </template>
 
 <script setup>
+import free4 from "@/assets/icons/free4.svg";
+import free3 from "@/assets/icons/free3.svg";
+import free2 from "@/assets/icons/free2.svg";
+import free1 from "@/assets/icons/free1.svg";
 import { ref } from 'vue'
     const containerRef = ref(null)
 
 const swiper = useSwiper(containerRef)
-    const slides = ref([
-        {title: "Call Scheduling Template", img: "/icons/free4.svg"},
-        {title: "Sales Template", img: "/icons/free3.svg"},
-        {title: "Customer Satisfaction Template", img: "/icons/free2.svg"},
-        {title: "FAQ Template", img: "/icons/free1.svg"},
-        {title: "Call Scheduling Template", img: "/icons/free4.svg"},
-        {title: "Call Scheduling Template", img: "/icons/free3.svg"},
-        
-    ])
+const slides = ref([
+    { title: "Call Scheduling Template", img: free4 },
+    { title: "Sales Template", img: free3 },
+    { title: "Customer Satisfaction Template", img: free2 },
+    { title: "FAQ Template", img: free1 },
+    { title: "Call Scheduling Template", img: free4 },
+    { title: "Call Scheduling Template", img: free3 },
+]);
     const swiperBreakpoints = ref({
     1536: { slidesPerView: 4, spaceBetween: 20 },
     1280: { slidesPerView: 4, spaceBetween: 20 },

@@ -50,16 +50,16 @@
             </div>
             <div class="flex md:justify-end space-x-[20px] mt-[20px] mb-[20px] md:mt-0 xl:space-x-[25px] xl:mb-[70px]">
                 <div class="aspect-[4/3] md:max-w-[35px] xl:max-w-[43px] max-w-[21px]">
-                    <NuxtImg src="/icons/socl1.svg" class="cursor-pointer w-full h-full"/>
+                    <img src="~/assets/icons/socl1.svg" class="cursor-pointer w-full h-full"/>
                 </div>
                 <div class="aspect-[4/3] md:max-w-[35px] xl:max-w-[43px] max-w-[21px]">
-                    <NuxtImg src="/icons/socl2.svg" class="cursor-pointer w-full h-full"/>
+                    <img src="~/assets/icons/socl2.svg" class="cursor-pointer w-full h-full"/>
                 </div>
                 <div class="aspect-[4/3] md:max-w-[35px] xl:max-w-[43px] max-w-[21px]">
-                    <NuxtImg src="/icons/socl3.svg" class="cursor-pointer w-full h-full"/>
+                    <img src="~/assets/icons/socl3.svg" class="cursor-pointer w-full h-full"/>
                 </div>
                 <div class="aspect-[4/3] md:max-w-[35px] xl:max-w-[43px] max-w-[21px]">
-                    <NuxtImg src="/icons/socl4.svg" class="cursor-pointer w-full h-full"/>
+                    <img src="~/assets/icons/socl4.svg" class="cursor-pointer w-full h-full"/>
                 </div>
                
             </div>

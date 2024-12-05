@@ -11,7 +11,7 @@
             </form>
         </div>
         <div class="lg:order-1">
-            <NuxtImg src="/img/world.png" />
+            <img src="~/assets/img/world.png" />
         </div>
     </div>
 </template>
