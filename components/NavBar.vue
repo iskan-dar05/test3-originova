@@ -2,10 +2,10 @@
   <div class="w-full flex items-center bg-primary xl:h-[102px] h-[74px] lg:h-[90px] md:h-[80px]">
     <div class="font-Montserrat w-[90%] mx-auto justify-between flex items-center">
       <div class="xl:w-[131px] w-[127.07px] h-[32.32px] lg:w-[120px] h-[33.32px] bg-white flex justify-center items-center">
-        <nuxt-img 
-          src="/img/logo.png" 
+        <img 
+          src="~/assets/img/logo.png" 
           class="xl:w-[115.15px] xl:h-[19.61px] lg:w-[105px] w-[111.7px] h-[19.02px] object-contain"
-        ></nuxt-img>
+        >
       </div>
       <ul class="hidden text-white font-normal xl:space-x-[50px] lg:flex lg:space-x-[30px] items-center">
         <li class="relative"
