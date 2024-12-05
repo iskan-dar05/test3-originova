@@ -1,7 +1,7 @@
 <template>
     <div class="w-full">
         <div class="xl:w-[90%] sm:mb-0 mb-[100px] w-[90%] mx-auto md:w-[90%] sm:w-[90%] sm:mx-auto sm:text-center pt-[20px] sm:pt-[20px] md:mx-auto text-center md:pt-[30px] xl:mx-auto xl:text-center xl:pt-[40px]">
-            <div class="xl:mx-auto sm:mx-auto sm:w-[70%] sm:mb-[40px] w-[90%] mx-auto mb-[30px] md:mx-auto md:w-[70%] md:mb-[40px] xl:w-[70%] xl:mb-[60px]">
+            <div class="xl:mx-auto sm:mx-auto sm:w-[90%] sm:font-semibold sm:mb-[40px] w-[90%] mx-auto mb-[30px] md:mx-auto md:w-[70%] md:mb-[40px] xl:w-[70%] xl:mb-[60px]">
                 <h3 class="xl:text-[48px] text-[25px] sm:text-[30px] md:text-[30px]">Empowering companies to stand out with customer experience</h3>
             </div>
             <div class="sm:block hidden">

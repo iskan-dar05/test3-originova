@@ -36,6 +36,7 @@ export default {
         'custom-small': '32px', // Example: 4px
         'custom-medium': '1rem',   // Example: 16px
         'custom-large': '2rem',    // Example: 32px
+        'button-custom': '5px'
       },
 
       colors: {
